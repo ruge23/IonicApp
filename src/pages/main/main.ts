@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { HomePage } from '../home/home';
 /**
  * Generated class for the MainPage page.
  *
@@ -14,12 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'main.html',
 })
 export class MainPage {
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
+  skip(){
+    this.navCtrl.push(HomePage);
   }
 
 }

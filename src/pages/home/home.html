@@ -1,11 +1,3 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
   <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
 
@@ -13,7 +5,7 @@
       <div class="diag" style="background: url('assets/img/whiteImg.svg') no-repeat">
         <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done)="animationDone($event)"></ion-icon>
       </div>
-      <div [@bounce]='state'>
+      <div [@bounce]='state' class="description">
         <h2>track your routine</h2>
         <p>whether it's sets, reps, weight used, you can track it all with our intuitive interface.</p>
       </div>
@@ -23,7 +15,7 @@
       <div class="diag" style="background: url('assets/img/whiteImg.svg') no-repeat">
         <ion-icon ios="ios-trophy" md="md-trophy" color="primary" [@bounce]='state' (@bounce.done)="animationDone($event)"></ion-icon>
       </div>
-      <div [@bounce]='state'>
+      <div [@bounce]='state' class="description">
         <h2>set personal goals</h2>
         <p>we're all in the gym for a reason: goals. set goals for diet and fitness.</p>
       </div>
@@ -33,14 +25,18 @@
       <div class="diag" style="background: url('assets/img/whiteImg.svg') no-repeat">
         <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary" [@bounce]='state' (@bounce.done)="animationDone($event)"></ion-icon>
       </div>
-      <div [@bounce]='state'>
+      <div [@bounce]='state' class="description">
         <h2>chat with others</h2>
         <p>inspire and help each other reach fitness and diet goals.</p>
       </div>
     </ion-slide>
-    
+  
   </ion-slides>
+  
+  <div class="nextAndPrev">
+      <button type="submit" float-left ion-button color="primary" (click)="prev()">Prev</button>
+      <button type="submit" float-right ion-button color="primary" style="margin-right:35px" (click)="next()">Next</button>
+  </div>
 
-  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
-
+  <!--<button (click)="skip()" id="skip">{{ skipMsg }}</button>-->
 </ion-content>

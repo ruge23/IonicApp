@@ -1,13 +1,13 @@
 .diag {
     position: absolute;
     z-index: 1;
-    width:100%;
+    width: 100% !important;
     top: 0;
     height:66%;
   }
   
   ion-icon {
-      margin-top: 40%;
+      margin-top: 30%;
       font-size:7em;
   }
   
@@ -29,7 +29,15 @@
   }
   
   .swiper-pagination {
-      bottom: 12% !important;
+      bottom: 40% !important;
+  }
+
+  .nextAndPrev{
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      cursor: pointer;
+      z-index: 5;
   }
   
   #skip {

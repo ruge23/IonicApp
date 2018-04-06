@@ -1,9 +1,8 @@
 import { Component, trigger, transition, style, state, animate, keyframes } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { MainPage } from '../main/main';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
-import { elementAttribute } from '@angular/core/src/render3/instructions';
+
 
 @Component({
   selector: 'page-home',
@@ -36,10 +35,6 @@ export class HomePage {
 
   }
 
-  skip(){
-    this.navCtrl.push(MainPage);
-  }
-
   slideChanged(){
     if(this.slides.isEnd())
       this.skipMsg = "Alrigth, I got it";
@@ -54,6 +49,14 @@ export class HomePage {
 
   animationDone() {
     this.state = 'x';
+  }
+
+  next(){
+    this.slides.slideNext();
+  }
+
+  prev(){
+    this.slides.slidePrev();
   }
 
 }

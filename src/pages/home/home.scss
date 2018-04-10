@@ -1,6 +1,26 @@
 page-home{
     ion-content{
         background: #000000;
+        .slide-zoom{
+            position: absolute;
+            animation-fill-mode: both;
+            animation-name: appear;
+            animation-duration: 4s;
+        }
+        .textAppear{
+            opacity: 0;
+            position: absolute;
+            animation-fill-mode: both;
+            animation-name: appear;
+            animation-duration: 4s;
+        }
+        .iconFast{
+            opacity: 0;
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            animation: animate 3s infinite; 
+        }
         .controls{
             background: #000000;
             display: inline-block;
@@ -22,6 +42,16 @@ page-home{
                 z-index: 999;
             }
         }
+    }
+    @keyframes animate {
+        0% { opacity: 0; }
+        50% { opacity: 0.5; }
+	    100% { opacity: 1.5; }
+    }
+    @keyframes appear {
+        0%{opacity: 0;}
+        50% { opacity: 0.5; }
+	    100%{opacity: 1;}
     }    
 }
 

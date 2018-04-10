@@ -6,7 +6,8 @@ import { ViewChild } from '@angular/core';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  /*animations:[
+  /*
+  animations:[
     trigger('bounce', [
       state('*', style({
           transform: 'translateX(0)'
@@ -22,12 +23,14 @@ import { ViewChild } from '@angular/core';
         style({transform: 'translateX(0)',     offset: 1.0})
       ])))
     ])
-  ]*/
+  ]
+  */
 })
 export class HomePage {
 
   @ViewChild(Slides) slides: Slides;
-  /*skipMsg: String = 'Skip';
+  /*
+  skipMsg: String = 'Skip';
   state : String = 'x';
   */
   constructor(public navCtrl: NavController) {

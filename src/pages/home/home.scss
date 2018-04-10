@@ -1,4 +1,29 @@
-.diag {
+page-home{
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+    }
+    .grid-home{
+        background: #262626;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+        "image image image image image image image image image";
+        .image{
+            grid-area: image;
+        }
+    }
+    .container{
+        grid-column: span 9;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*.diag {
     grid-column: span 12;
     background-position: center;
     background-size: cover;
@@ -52,3 +77,5 @@
       cursor:pointer;
       z-index:5;
   }
+*/
+

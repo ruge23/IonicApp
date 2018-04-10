@@ -1,81 +1,28 @@
 page-home{
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(9,1fr);
-    }
-    .grid-home{
-        background: #262626;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-areas: 
-        "image image image image image image image image image";
-        .image{
-            grid-area: image;
+    ion-content{
+        background: #000000;
+        .controls{
+            background: #000000;
+            display: inline-block;
+            width: 100%;
+            height: 10%;
+            .iconNext{
+                margin: 10px 40px;
+                float: right;
+                width: 30px;
+                height: 30px;
+                z-index: 999;
+            }
+            .iconPrev{
+                margin: 10px 40px;
+                transform: rotate(180deg);    
+                float: left;
+                width: 30px;
+                height: 30px;
+                z-index: 999;
+            }
         }
-    }
-    .container{
-        grid-column: span 9;
-        width: 100%;
-        height: 100%;
-    }
+    }    
 }
 
-
-/*.diag {
-    grid-column: span 12;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 1;
-    max-width: 100% !important;
-    top: 0;
-  }
-  
-  ion-icon {
-      margin-top: 20%;
-      font-size:7em;
-  }
-  
-  h2 {
-      margin-top: 40% !important;
-      font-weight:bold;
-      font-size:1em;
-  }
-  
-  p {
-      width:80%;
-      display:block;
-      margin: 0 auto;
-      font-size:.9em;
-  }
-  
-  .swiper-pagination-bullet-active {
-      background:#C400FF;
-  }
-  
-  .swiper-pagination {
-      bottom: 40% !important;
-  }
-
-  .nextAndPrev{
-      position: absolute;
-      bottom: 15px;
-      width: 100%;
-      cursor: pointer;
-      z-index: 5;
-  }
-  
-  #skip {
-      position:absolute;
-      bottom: 20px;
-      width:100%;
-      background:none !important;
-      text-align:center;
-      cursor:pointer;
-      z-index:5;
-  }
-*/
 

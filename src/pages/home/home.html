@@ -1,13 +1,13 @@
-<ion-content no-bounce>
+<ion-content no-bounce responsive-lg>
   <div ion-fixed style="width: 100%; height:100%;">
-    <ion-slides loop="true" style="height:90%;">
+    <ion-slides effect="fade" speed="1500" style="height:90%;" (ionSlideWillChange)="onSlideChanged()">
       <ion-slide style="background-color:#000000;color:white">
         <ion-grid>
           <ion-row>  
-            <ion-col col-6>
-              <h1 class="textAppear">Welcome to Slider</h1>
+            <ion-col width-50>
+              <p class="textAppear">Tome el móvil y la S Pen al lado y descubra lo que el Note8 hace.</p>
             </ion-col>
-            <ion-col col-6>
+            <ion-col width-50>
               <p><img class="iconFast" src="./assets/img/fast-forward.svg" alt="icon"></p>
             </ion-col>
           </ion-row>
@@ -16,14 +16,14 @@
       <ion-slide style="background-color:#000000;color:white">
         <ion-grid>
           <ion-row>
-            <ion-col col-4>
-              <h1>Welcome to Slider</h1>
+            <ion-col width-25>
+              <h1>1</h1>
             </ion-col>
-            <ion-col col-4>
-              <p>Page 2</p>
+            <ion-col width-50>
+              <p>Bloquee la pantalla apretando el botón de la lateral derecha</p>
             </ion-col>
-            <ion-col col-4>
-              <p>Image Celu</p>
+            <ion-col width-25>
+              <p><img src="./assets/img/celu.jpg" alt="imge celular"></p>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -31,14 +31,14 @@
       <ion-slide style="background-color:#000000;color:white">
           <ion-grid>
             <ion-row>
-              <ion-col col-4>
-                <h1>Welcome to Slider</h1>
+              <ion-col width-25>
+                <h1>1</h1>
               </ion-col>
-              <ion-col col-4>
-                <p>Page 3</p>
+              <ion-col width-50>
+                <p>Apunte la pluma para la pantalla bloqueada y apriete el botón que esta en ella</p>
               </ion-col>
-              <ion-col col-4>
-                <p>Image Celu</p>
+              <ion-col width-25>
+                <p><img src="./assets/img/celu.jpg" alt="imge celular" height="80%"></p>
               </ion-col>
             </ion-row>
           </ion-grid>
@@ -46,14 +46,16 @@
       <ion-slide style="background-color:#000000;color:white">
           <ion-grid>
             <ion-row>
-              <ion-col col-4>
-                <h1>Welcome to Slider</h1>
+              <ion-col width-25>
+                <h1>1</h1>
               </ion-col>
-              <ion-col col-4>
-                <p>Page 4</p>
+              <ion-col width-50>
+                <p>Escriba y dibuje como quiera, no se preocupe con el numero de paginas<br/><br/>
+                    Despues salve sus anotaciones.<br/>
+                    Usted podrá editarlo cuando lo necesite.</p>
               </ion-col>
-              <ion-col col-4>
-                <p>Image Celu</p>
+              <ion-col width-25>
+                <p><img src="./assets/img/celu.jpg" alt="imge celular" height="80%"></p>
               </ion-col>
             </ion-row>
           </ion-grid>

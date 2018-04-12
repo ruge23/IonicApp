@@ -1,6 +1,6 @@
 <ion-content no-bounce>
   <div ion-fixed style="width: 100%; height:100%;">
-    <ion-slides effect="fade" speed="1000" style="height:90%;" (ionSlideWillChange)="onSlideChanged()">
+    <ion-slides effect="fade" speed="1000" style="height:90%;" (ionSlideWillChange)="redirectToMainPage()">
       <ion-slide style="background-color:#000000;color:white">
         <ion-grid>
           <ion-row responsive-xl>  
@@ -8,7 +8,7 @@
               <p>Tome el móvil y la S Pen al lado y descubra lo que el Note8 hace.</p>
             </ion-col>
             <ion-col width-50>
-              <p><img class="iconFast" src="./assets/img/fast-forward.svg" alt="icon"></p>
+              <p><ion-icon class="iconFast" name="fastforward"></ion-icon></p>
             </ion-col>
           </ion-row>
         </ion-grid>

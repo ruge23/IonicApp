@@ -25,20 +25,32 @@ page-main {
         min-height: 100%;
     }
     .iconPlay{
+        opacity: .3;
+        color: #fff !important;
         position: absolute;
-        bottom: 1.5em;
-        right: 1em;
-        height: 50px;
-        width: 50px;
+        font-size: 3em;
+        bottom: .3em;
+        right: .7em;
+        animation: neon1 1.5s ease-in-out infinite alternate;
     }
-    .iconInit{
-        animation: animate 3s infinite; 
-    }
-    @keyframes animate {
-        0% { opacity: 1; }
-        30% { opacity: 0.5; }
-        50% { opacity: 0.1; }
-        70% { opacity :0.5; }
-	    100% { opacity: 1.5; }
-    }
+    @keyframes neon1 {
+        from{
+            text-shadow: 
+            0 0 5px #fff,
+            0 0 20px #fff,
+            0 0 30px #228DFF,
+            0 0 40px #228DFF,
+            0 0 70px #228DFF;
+            opacity: .3;
+        }
+        to{
+            text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #fff,
+            0 0 20px #228DFF,
+            0 0 35px #228DFF;
+            opacity: 1;
+        }
+    }     
 }

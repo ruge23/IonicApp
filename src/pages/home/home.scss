@@ -43,11 +43,9 @@ page-home{
             animation-duration: 3s;
         }
         .iconFast{
-            opacity: 0;
-            width: 50%;
-            height: 50%;
+            font-size: 3em !important;
             margin: auto;
-            animation: animate 3s infinite; 
+            animation: neonIcon 1.5s ease-in-out infinite alternate; 
         }
         .controls{
             background: #000000;
@@ -55,14 +53,16 @@ page-home{
             width: 100%;
             height: 10%;
             .iconNext{
-                margin: 10px 40px;
+                margin-top: 0;
+                margin-right: 50px;
                 float: right;
                 width: 30px;
                 height: 30px;
                 z-index: 999;
             }
             .iconPrev{
-                margin: 10px 40px;
+                margin-top: 0;
+                margin-left: 50px;
                 transform: rotate(180deg);    
                 float: left;
                 width: 30px;
@@ -70,11 +70,6 @@ page-home{
                 z-index: 999;
             }
         }
-    }
-    @keyframes animate {
-        0% { opacity: 0; }
-        50% { opacity: 0.5; }
-	    100% { opacity: 1.5; }
     }
     @keyframes appear {
         0%{opacity: 0;}
@@ -89,7 +84,6 @@ page-home{
             0 0 30px #228DFF,
             0 0 40px #228DFF,
             0 0 70px #228DFF,
-
         }
         to{
             text-shadow: 
@@ -99,7 +93,7 @@ page-home{
             0 0 20px #228DFF,
             0 0 35px #228DFF,
         }
-    }    
+    }     
 }
 
 

@@ -28,17 +28,26 @@ export class HomePage {
     this.slides.slidePrev(1500, true);
   }
 
+  goToMain(){
+    const animationOptions = {
+      animation : 'md-transition',
+      duration: 1000,
+    }
+    this.navCtrl.push(MainPage, {}, animationOptions);
+  }
+
   redirectToMainPage(){
     console.log('aqui', this.slides.isEnd())
     if(this.slides.isEnd()){
       this.time = setTimeout(()=>{
-        this.navCtrl.push(MainPage);
-      }, 10000) 
+        this.goToMain();
+      }, 5000) 
     }else{
       clearTimeout(this.time);
     }
   }
 }
+
 
 
       

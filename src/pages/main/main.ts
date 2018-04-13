@@ -12,8 +12,13 @@ export class MainPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  skip(){
-    this.navCtrl.push(HomePage);
+  goToHome(){
+    const animationsOptions = {
+      animation : 'md-transition',
+      duration: 1000,
+    }
+
+    this.navCtrl.push(HomePage, {}, animationsOptions);
   }
 
 }

@@ -1,61 +1,106 @@
 <ion-content no-bounce>
   <div ion-fixed style="width: 100%; height:100%;">
     <ion-slides effect="fade" speed="1000" style="height:90%;" (ionSlideWillChange)="redirectToMainPage()">
-      <ion-slide style="background-color:#000000;color:white">
+      <ion-slide>
         <ion-grid>
           <ion-row responsive-xl>  
-            <ion-col width-50>
-              <p>Tome el móvil y la S Pen al lado y descubra lo que el Note8 hace.</p>
+            <ion-col>
+              <h1 class="h1Inicio">¿Está Inspirado?</h1>
             </ion-col>
-            <ion-col width-50>
-              <p><ion-icon class="iconFast" name="fastforward"></ion-icon></p>
+          </ion-row>
+          <ion-row> 
+            <ion-col>
+              <p class="pInicio">
+                Use la S Pen<br>
+                Escriba y dibuje<br>
+                con presición
+              </p>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-slide>
-      <ion-slide style="background-color:#000000;color:white">
+      <ion-slide>
+        <ion-grid>
+          <ion-row responsive-xl>  
+            <ion-col col-6>
+              <p class="pSlide2">
+                Tome el móvil y<br>
+                la S Pen al lado<br>
+                y descubra lo que<br>
+                el Note8 hace.
+              </p>
+            </ion-col>
+            <ion-col col-6>
+              <ion-icon class="iconFast" name="fastforward"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
         <ion-grid>
           <ion-row responsive-xl>
             <ion-col col-2>
-              <h1>1</h1>
+              <h1 class="number">1</h1>
             </ion-col>
             <ion-col col-6>
-              <p>Bloquee la pantalla apretando el botón del lateral derecho</p>
+              <p class="pSlide2">
+                Bloquee la<br>
+                pantalla<br>
+                apretando<br>
+                el botón del<br>
+                lateral derecho
+              </p>
             </ion-col>
             <ion-col col-4>
-              <p><img src="./assets/img/celu.jpg" alt="imge celular"></p>
+              <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-slide>
-      <ion-slide style="background-color:#000000;color:white">
+      <ion-slide>
           <ion-grid>
             <ion-row responsive-xl>
               <ion-col col-2>
-                <h1>1</h1>
+                <h1 class="number">1</h1>
               </ion-col>
               <ion-col col-6>
-                <p>Apunte la pluma para la pantalla bloqueada y apriete el botón que esta en ella</p>
+                <p class="pSlide2">
+                  Apunte la pluma<br>
+                  para la pantalla<br>
+                  bloqueada y<br>
+                  apriete el botón<br>
+                  que esta en ella.
+                </p>
               </ion-col>
               <ion-col col-4>
-                <p><img src="./assets/img/celu.jpg" alt="imge celular" height="80%"></p>
-              </ion-col>
+                <div style="background:url('assets/img/celu.jpg')">
+                  <span class="pulse"></span>
+                </div>
+                </ion-col>
             </ion-row>
           </ion-grid>
       </ion-slide>
-      <ion-slide style="background-color:#000000;color:white">
+      <ion-slide>
           <ion-grid>
             <ion-row responsive-xl>
               <ion-col col-2>
-                <h1>1</h1>
+                <h1 class="number">1</h1>
               </ion-col>
               <ion-col col-6>
-                <p>Escriba y dibuje como quiera, no se preocupe con el numero de paginas<br/><br/>
-                    Despues salve sus anotaciones.<br/>
-                    Usted podrá editarlo cuando lo necesite.</p>
+                <p class="pSlide2">
+                  Escriba y dibuje como<br>
+                  quiera,no se<br>
+                  preocupe con el<br> 
+                  numero de paginas<br/><br/>
+                  Despues salve sus<br>
+                  anotaciones.<br/>
+                  Usted podrá editarlo<br>
+                  cuando lo necesite.
+                </p>
               </ion-col>
               <ion-col col-4>
-                <p><img src="./assets/img/celu.jpg" alt="imge celular" height="80%"></p>
+                <span class="pulse"></span>
+                <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
               </ion-col>
             </ion-row>
           </ion-grid>

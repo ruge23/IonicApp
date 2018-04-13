@@ -2,18 +2,9 @@
 
 page-home{
     ion-content{
-        background: #000000;
-        h1{
-            font-size: 80px;
-            font-family: 'Do Hyeon', sans-serif;
-            animation: neon1 1.5s ease-in-out infinite alternate;
-        }
-        p{
-            text-align: center;
-            font-size: 1em;
+        ion-slide{
+            background: #000000;
             color: #fff;
-            font-family: 'Do Hyeon', sans-serif;
-            animation: neon1 1.5s ease-in-out infinite alternate;
         }
         .grid{
             width: 100%;
@@ -29,23 +20,81 @@ page-home{
             animation-fill-mode: both;
             animation-name: appear;
             animation-duration: 3s;
-        }
-        .slide-zoom{
-            position: absolute;
-            animation-fill-mode: both;
-            animation-name: appear;
-            animation-duration: 3s;
-        }
-        .textAppear{
-            opacity: 0;
-            animation-fill-mode: both;
-            animation-name: appear;
-            animation-duration: 3s;
+            .h1Inicio{
+                float: left;
+                margin-top: 0;
+                margin-left: 10%;
+                opacity: 0;
+                font-size: 50px;
+                font-family: 'Do Hyeon', sans-serif;
+                text-shadow: 
+                            0 0 5px #fff,
+                            0 0 20px #fff,
+                            0 0 30px #228DFF,
+                            0 0 40px #228DFF,
+                            0 0 70px #228DFF;
+                animation: appear 3s both;
+            }
+            .pInicio{
+                opacity: 0;
+                float: left;
+                margin-left: 10%;
+                font-size: 1em;
+                color: #fff;
+                font-family: 'Do Hyeon', sans-serif; 
+                text-shadow: 
+                            0 0 5px #fff,
+                            0 0 10px #fff,
+                            0 0 15px #fff,
+                            0 0 20px #228DFF,
+                            0 0 35px #228DFF;
+                animation: appear 3s both;
+            }
+            .pSlide2{
+                opacity: 0;
+                font-size: 2em;
+                color: #fff;
+                font-family: 'Do Hyeon', sans-serif;
+                text-shadow: 
+                            0 0 5px #fff,
+                            0 0 20px #fff,
+                            0 0 30px #228DFF,
+                            0 0 40px #228DFF,
+                            0 0 70px #228DFF;
+                animation: appear 3s both;
+            }
+            .number{
+                float: left;
+                margin-left: 30%;
+                opacity: 0;
+                font-size: 8em;
+                font-family: 'Do Hyeon', sans-serif;
+                text-shadow: 
+                            0 0 5px #fff,
+                            0 0 20px #fff,
+                            0 0 30px #228DFF,
+                            0 0 40px #228DFF,
+                            0 0 70px #228DFF;
+                animation: appear 3s both;
+            }
         }
         .iconFast{
-            font-size: 3em !important;
-            margin: auto;
-            animation: neonIcon 1.5s ease-in-out infinite alternate; 
+            opacity: 0;
+            font-size: 4em !important;
+            margin-left: 15%;
+            float: left;
+            animation: neon1 2s ease-in-out infinite alternate;
+        }
+        .pulse{
+            width: 50px;
+            height: 50px;
+            z-index: 999;
+            background: #ff6d4a;
+            border-radius: 50%;
+            float: left;
+            top: 1em;
+            color: #fff;
+            animation: animate 3s linear infinite;
         }
         .controls{
             background: #000000;
@@ -54,15 +103,15 @@ page-home{
             height: 10%;
             .iconNext{
                 margin-top: 0;
-                margin-right: 50px;
+                margin-right: 20%;
                 float: right;
                 width: 30px;
                 height: 30px;
-                z-index: 999;
+                z-index: 999 !important;
             }
             .iconPrev{
                 margin-top: 0;
-                margin-left: 50px;
+                margin-left: 20%;
                 transform: rotate(180deg);    
                 float: left;
                 width: 30px;
@@ -70,28 +119,56 @@ page-home{
                 z-index: 999;
             }
         }
+        .imgCelu{
+            width: 70% !important;
+            height: 70% !important;
+        }
     }
     @keyframes appear {
-        0%{opacity: 0;}
-        50% { opacity: 0.7;}
-	    100%{opacity: 1;}
+        0%{ opacity: 0; }
+        10%{ opacity: .1; }
+        20%{ opacity: .2; }
+        30%{ opacity: .3;}
+        40%{ opacity: .4; }
+        50%{ opacity: .5; }
+        60%{ opacity: .6; }
+        70%{ opacity: .7; }
+        80%{ opacity: .8; }
+        90%{ opacity: .9; }
+	    100%{ opacity: 1; }
     }
     @keyframes neon1 {
         from{
+            opacity: 0;
             text-shadow: 
             0 0 5px #fff,
             0 0 20px #fff,
             0 0 30px #228DFF,
             0 0 40px #228DFF,
-            0 0 70px #228DFF,
+            0 0 70px #228DFF;
         }
         to{
+            opacity: 1;
             text-shadow: 
             0 0 5px #fff,
             0 0 10px #fff,
             0 0 15px #fff,
             0 0 20px #228DFF,
-            0 0 35px #228DFF,
+            0 0 35px #228DFF;
+        }
+    }
+    @keyframes animate {
+        0%{
+            box-shadow: 0 0 0 0 rgba(255, 109, 74, .7), 0 0 0 0 rgba(255, 109, 74, .7)
+        }
+        40%{
+            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 0 rgba(255, 109, 74, .7)
+        }
+        80%{
+            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0)
+        }
+        100%{
+            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0)
         }
     }     
 }

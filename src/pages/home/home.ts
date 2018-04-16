@@ -152,13 +152,16 @@ export class HomePage {
 
     setTimeout(()=> {
       this.state1= 'opaque'
-    },3000)
+    },2000)
+
+    this.goToMain();
   }
 
   constructor(public navCtrl: NavController) {
 
   }
 
+  timer = false;
   time;
   
   next(){
@@ -172,17 +175,19 @@ export class HomePage {
   goToMain(){
     const animationOptions = {
       animation : 'md-transition',
-      duration: 1000,
+      duration: 1500,
     }
-    this.navCtrl.push(MainPage, {}, animationOptions);
+    this.time = setTimeout(()=>{
+      this.navCtrl.push(MainPage, {}, animationOptions);
+    },15000)
   }
   
   animationSlides(){  
     if(this.slides.getActiveIndex() === 0){
+      
       setTimeout(() =>{
         this.state = 'opaque'
       },500)
-  
       setTimeout(()=> {
         this.state1= 'opaque'
       },5000)
@@ -191,13 +196,19 @@ export class HomePage {
       this.state1 = 'transparent';
     }
     if(this.slides.getActiveIndex() === 1){
+      clearTimeout(this.time);
+
       setTimeout(() => {
         this.state2 = 'opaque';
       },1500)
+      
+      this.goToMain();
     }else{
       this.state2 = 'transparent';
     }
     if(this.slides.getActiveIndex() === 2){
+      clearTimeout(this.time);
+
       setTimeout(()=>{
         this.state3 = 'opaque';
       },1000)
@@ -207,29 +218,39 @@ export class HomePage {
       setTimeout(()=>{
         this.state5 = 'opaque';
       },3000)
+
+      this.goToMain();
     }else{
       this.state3 = 'transparent';
       this.state4 = 'transparent';
       this.state5 = 'transparent';
     }
     if(this.slides.getActiveIndex() === 3){
+      clearTimeout(this.time);
+
       setTimeout(()=>{
         this.state7 = 'opaque';
       },1000)
       setTimeout(()=>{
         this.state6 = 'opaque';
       },2000)
+
+      this.goToMain();
     }else{
       this.state6 = 'transparent';
       this.state7 = 'transparent';
     }
     if(this.slides.getActiveIndex() === 4){
+      clearTimeout(this.time);
+
       setTimeout(()=>{
         this.state9 = 'opaque';
       },1000)
       setTimeout(()=>{
         this.state8 = 'opaque';
       },2000)
+
+      this.goToMain();
     }else{
       this.state8 = 'transparent';
       this.state9 = 'transparent';
@@ -244,14 +265,6 @@ export class HomePage {
 
   redirectToMainPage(){
     this.animationSlides();
-
-    if(this.slides.isEnd()){
-      this.time = setTimeout(()=>{
-        this.goToMain();
-      }, 15000) 
-    }else{
-      clearTimeout(this.time);
-    }
   }
 }
 

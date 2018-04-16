@@ -20,7 +20,7 @@ export class MainPage {
       animation : 'md-transition',
       duration: 1000,
     }
-    let time = setTimeout(() => {
+     this.time = setTimeout(() => {
       this.navCtrl.push(HomePage, {}, animationsOptions)
     }, 500)
   }

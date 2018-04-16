@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MainPage } from '../pages/main/main';
+import { FadeTransition } from '../transitions/fade-transition';
+import { Config } from 'ionic-angular';
+
 
 @NgModule({
   declarations: [
@@ -32,4 +35,8 @@ import { MainPage } from '../pages/main/main';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(public config: Config){
+    this.config.setTransition('fade-transition', FadeTransition);
+  }
+}

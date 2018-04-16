@@ -1,20 +1,21 @@
 <ion-content no-bounce>
   <div ion-fixed style="width: 100%; height:100%;">
-    <ion-slides effect="fade" speed="1000" style="height:90%;" (ionSlideWillChange)="redirectToMainPage()">
+    <ion-slides effect="fade" speed="1000" style="height:90%;" (ionSlidePrevStart)="changeSlide()" (ionSlideWillChange)="redirectToMainPage()">
       <ion-slide>
         <ion-grid>
           <ion-row responsive-xl>  
             <ion-col>
-              <h1 class="h1Inicio">¿Está Inspirado?</h1>
+              <h1 [@elementState]="state" class="h1Inicio">¿Está Inspirado?</h1>
             </ion-col>
           </ion-row>
           <ion-row> 
             <ion-col>
-              <p class="pInicio">
+              <p [@elementState1]="state1" class="pInicio">
                 Use la S Pen<br>
                 Escriba y dibuje<br>
-                con presición
+                con presición.
               </p>
+              <p [@elementState]="state">Imagen con Animación</p>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -23,7 +24,7 @@
         <ion-grid>
           <ion-row responsive-xl>  
             <ion-col col-6>
-              <p class="pSlide2">
+              <p [@elementState2]="state2" class="pSlide2">
                 Tome el móvil y<br>
                 la S Pen al lado<br>
                 y descubra lo que<br>
@@ -31,7 +32,7 @@
               </p>
             </ion-col>
             <ion-col col-6>
-              <ion-icon class="iconFast" name="fastforward"></ion-icon>
+              <ion-icon [@elementState2]="state2" class="iconFast" name="fastforward"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -40,10 +41,10 @@
         <ion-grid>
           <ion-row responsive-xl>
             <ion-col col-2>
-              <h1 class="number">1</h1>
+              <h1 [@elementState3]="state3" class="number">1</h1>
             </ion-col>
             <ion-col col-6>
-              <p class="pSlide2">
+              <p [@elementState4]="state4" class="pSlide2">
                 Bloquee la<br>
                 pantalla<br>
                 apretando<br>
@@ -52,7 +53,10 @@
               </p>
             </ion-col>
             <ion-col col-4>
-              <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
+              <div [@elementState5]="state5" >
+                <span class="pulse"></span>
+                <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
+              </div>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -63,7 +67,7 @@
               <ion-col col-2>
                 <h1 class="number">1</h1>
               </ion-col>
-              <ion-col col-6>
+              <ion-col col-6 [@elementState6]="state6">
                 <p class="pSlide2">
                   Apunte la pluma<br>
                   para la pantalla<br>
@@ -73,10 +77,11 @@
                 </p>
               </ion-col>
               <ion-col col-4>
-                <div style="background:url('assets/img/celu.jpg')">
+                <div [@elementState7]="state7" >
                   <span class="pulse"></span>
-                </div>
-                </ion-col>
+                  <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
+                </div>              
+              </ion-col>
             </ion-row>
           </ion-grid>
       </ion-slide>
@@ -87,7 +92,7 @@
                 <h1 class="number">1</h1>
               </ion-col>
               <ion-col col-6>
-                <p class="pSlide2">
+                <p [@elementState8]="state8" class="pSlide2">
                   Escriba y dibuje como<br>
                   quiera,no se<br>
                   preocupe con el<br> 
@@ -99,16 +104,22 @@
                 </p>
               </ion-col>
               <ion-col col-4>
-                <span class="pulse"></span>
-                <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
+                <div [@elementState9]="state9" >
+                  <span class="pulse"></span>
+                  <img class="imgCelu" src="./assets/img/celu.jpg" alt="imge celular">
+                </div>
               </ion-col>
             </ion-row>
           </ion-grid>
       </ion-slide>    
     </ion-slides>
     <div class="controls">
-      <img class="iconNext" src="./assets/img/play.svg" alt="icon play" (click)="next()">
-      <img class="iconPrev" src="./assets/img/play.svg" alt="icon play" (click)="prev()">
+      <div class="iconNext" (click)="next()"> 
+        <ion-icon name="play"></ion-icon>
+    </div>
+      <div class="iconPrev" (click)="prev()"> 
+        <ion-icon name="play"></ion-icon>
+      </div>
     </div>
   </div>
 </ion-content>

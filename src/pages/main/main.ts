@@ -7,8 +7,11 @@ import { HomePage } from '../home/home';
   selector: 'page-main',
   templateUrl: 'main.html',
 })
+
 export class MainPage {
   
+  time ;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -17,8 +20,9 @@ export class MainPage {
       animation : 'md-transition',
       duration: 1000,
     }
-
-    this.navCtrl.push(HomePage, {}, animationsOptions);
+    let time = setTimeout(() => {
+      this.navCtrl.push(HomePage, {}, animationsOptions)
+    }, 500)
   }
 
 }

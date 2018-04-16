@@ -8,7 +8,6 @@ import {
   animate,
   transition
 } from '@angular/animations';
-
 import { MainPage } from '../main/main';
 
 @Component({
@@ -26,6 +25,16 @@ import { MainPage } from '../main/main';
       transition('transparent => opaque', animate('2000ms ease-in'))  
     ]),
     trigger('elementState1', [
+      state('transparent', style({
+        opacity: 0,
+      })),
+      state('opaque', style({
+        opacity:1,
+      })),
+      transition('opaque => transparent', animate ('2000ms ease-in')),
+      transition('transparent => opaque', animate('2000ms ease-in'))
+    ]),
+    trigger('elementState2', [
       state('transparent', style({
         opacity: 0,
       })),
@@ -149,7 +158,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-  currentIndex = 0;
+
   time;
   
   next(){
@@ -163,12 +172,12 @@ export class HomePage {
   goToMain(){
     const animationOptions = {
       animation : 'md-transition',
-      duration: 500,
+      duration: 1000,
     }
     this.navCtrl.push(MainPage, {}, animationOptions);
   }
-  animationSlides(){
-    
+  
+  animationSlides(){  
     if(this.slides.getActiveIndex() === 0){
       setTimeout(() =>{
         this.state = 'opaque'
@@ -228,14 +237,12 @@ export class HomePage {
   }
 
   changeSlide(){   
-
     setTimeout(()=>{
       this.animationSlides();
     },1000)
   }
 
   redirectToMainPage(){
-    
     this.animationSlides();
 
     if(this.slides.isEnd()){

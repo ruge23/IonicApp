@@ -11,22 +11,17 @@ export class FadeTransition extends PageTransition{
     init(){
         super.init();
 
-        const plt = this.plt;
-        const enteringView = this.enteringView;
         const opts = this.opts;
 
         this.duration(isPresent(opts.duration) ? opts.duration : DURATION);
     }
 
     if (enteringView) {
-        const enteringPageEle: Element = enteringView.pageRef().nativeElement;
   
         const enteringContent = new Animation(this.plt, enteringView.pageRef());
         this.add(enteringContent);
   
         enteringContent
             .fromTo(OPACITY, TRANSPARENT, OPAQUE, true);
-    }
-
-    
+    } 
 }

@@ -11,7 +11,7 @@ page-home{
             height: 100%;
         }
         .row{
-            //align-items: flex-start;
+            align-items: flex-start;
             //align-items: stretch;
             //justify-content: start;
             margin: 0;
@@ -21,7 +21,9 @@ page-home{
             //align-self: stretch; 
             .h1Inicio{
                 float: left;
-                font-size: 50px;
+                margin-top: 0;
+                font-size: 60px;
+                letter-spacing: 3px;
                 font-family: 'Do Hyeon', sans-serif;
                 text-shadow: 
                             0 0 5px #fff,
@@ -46,6 +48,7 @@ page-home{
             }
             .pSlide2{
                 text-align: left;
+                margin-left: 30%;
                 font-size: 2em;
                 color: #fff;
                 font-family: 'Do Hyeon', sans-serif;
@@ -70,7 +73,7 @@ page-home{
             }
         }
         .iconFast{
-            font-size: 4em !important;
+            font-size: 6em !important;
             margin-left: 15%;
             text-shadow: 
                         0 0 5px #fff,
@@ -80,15 +83,40 @@ page-home{
                         0 0 70px #228DFF;
         }
         .pulse{
-            width: 50px;
-            height: 50px;
+            position: relative;
+            width: 40px;
+            height: 40px;
             z-index: 999;
-            background: #ff6d4a;
+            background: rgba(34, 141, 255, .5);
             border-radius: 50%;
             float: left;
-            top: 1em;
-            color: #fff;
-            animation: animate 3s linear infinite;
+            top: 10.2em;
+            margin-left: 13.5em;
+            animation: animate 2s linear infinite;
+        }
+        .pulse2{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            z-index: 999;
+            background: rgba(34, 141, 255, .5);
+            border-radius: 50%;
+            float: left;
+            top: 17.8em;
+            margin-left: 10em;
+            animation: animate 2s linear infinite;
+        }
+        .pulse3{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            z-index: 999;
+            background: rgba(34, 141, 255, .5);
+            border-radius: 50%;
+            float: left;
+            top: 3.8em;
+            margin-left: 12em;
+            animation: animate 2s linear infinite;
         }
         .controls{
             background: #000000;
@@ -105,7 +133,6 @@ page-home{
                 text-shadow: 
                             0 0 10px #fff,
                             0 0 30px #228DFF,
-
             }
             .iconPrev{
                 color: #fff !important;
@@ -153,16 +180,16 @@ page-home{
     }
     @keyframes animate {
         0%{
-            box-shadow: 0 0 0 0 rgba(255, 109, 74, .7), 0 0 0 0 rgba(255, 109, 74, .7)
+            box-shadow: 0 0 0 0 rgba(34, 141, 255, .7), 0 0 0 0 rgba(34, 141, 255, .7)
         }
         40%{
-            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 0 rgba(255, 109, 74, .7)
+            box-shadow: 0 0 0 0 rgba(34, 141, 255, 0), 0 0 0 10px rgba(34, 141, 255, .3)
         }
         80%{
-            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0)
+            box-shadow: 0 0 0 0 rgba(34, 141, 255, 0), 0 0 0 30px rgba(34, 141, 255, 0)
         }
         100%{
-            box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0)
+            box-shadow: 0 0 0 0 rgba(34, 141, 255, 0), 0 0 0 30px rgba(34, 141, 255, 0)
         }
     }     
 }

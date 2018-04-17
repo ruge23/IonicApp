@@ -1,14 +1,9 @@
 import { Component} from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import {trigger,state,style,animate,transition} from '@angular/animations';
 import { MainPage } from '../main/main';
+
 
 @Component({
   selector: 'page-home',
@@ -143,8 +138,9 @@ export class HomePage {
   @ViewChild(Slides) slides: Slides;
 
   ngAfterViewInit(){
-    console.log('estas es!');
+    //console.log('estas es!');
     this.slides.freeMode = true;
+    clearTimeout(this.time);
     
     setTimeout(() =>{
       this.state = 'opaque'
@@ -152,7 +148,7 @@ export class HomePage {
 
     setTimeout(()=> {
       this.state1= 'opaque'
-    },2000)
+    },5700)
 
     this.goToMain();
   }
